@@ -5,12 +5,10 @@
 <p>
     入力1
     <input type="text" bind="@Text1" />
-
 </p>
 <p>
     出力1
     <input type="text" value="@Text1" />
-
 </p>
 
 <p>
@@ -21,12 +19,10 @@
 <p>
     入力2
     <input type="text" oninput="@(ui => { Text2 = (string)ui.Value; })" />
-
 </p>
 <p>
     出力2
     <input type="text" value="@Text2" />
-
 </p>
 
 @functions{
