@@ -1,0 +1,36 @@
+﻿@page "/databinding"
+
+
+<p>エンターを押した時点で出力側が更新</p>
+<p>
+    入力1
+    <input type="text" bind="@Text1" />
+
+</p>
+<p>
+    出力1
+    <input type="text" value="@Text1" />
+
+</p>
+
+<p>
+    ------
+</p>
+
+<p>入力中に即時に出力側も更新</p>
+<p>
+    入力2
+    <input type="text" oninput="@(ui => { Text2 = (string)ui.Value; })" />
+
+</p>
+<p>
+    出力2
+    <input type="text" value="@Text2" />
+
+</p>
+
+@functions{
+    string Text1 { get; set; }
+
+    string Text2 { get; set; }
+}
